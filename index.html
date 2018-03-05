@@ -1,0 +1,77 @@
+<head>
+    <style>
+        body{
+            background-color: black;
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+        }
+        #vid{
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            width: auto;
+            height: 100%;
+        }
+        .icons{
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+        #icons:hover{
+            opacity: 0.4;
+        }
+        .box{
+            color: aliceblue;
+            background-color: red;
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            transform: skew(-10deg);
+            left: -100px;
+            opacity: 0.8;
+        }
+        ul{
+            margin: 10px;
+            margin-right: 5px; 
+        }
+        #quote{
+            position: relative;
+            align-items: center;
+            color: gold;
+            left: 10%;
+            top: 40%;
+            font-size: 20px
+        }
+    </style>
+</head>
+<body>
+   <video autoplay loop id="vid"><source src="Vid.mp4" type="video/mp4"></video>
+        
+        <div class="box">
+        </div>
+        <div class="icons">
+            <ul>
+                <ul><a href=# id="icons"><img src="kat.jpg" width="25px" height="25px"></a></ul>
+                <ul><a href=# id="icons"><img src="kat.jpg" width="25px" height="25px"></a></ul>
+            </ul>
+        </div>
+        <div id="quote">
+            Through hell and fire I shall walk.<br>
+            But this?<br> 
+            **** that
+        </div>
+    <script>
+        $(document).ready(function(){
+            $(document).keyup(function(x){
+                var input=x.which
+                if(x==17 && x==107){
+                    $(document).zoom()
+                }
+                if(x==17 && x==109){
+                    $(document).zoom(0.8)
+                }
+            })
+        })    
+    </script>
+</body>
